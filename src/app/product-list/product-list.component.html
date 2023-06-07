@@ -2,13 +2,15 @@
 
 <div *ngFor="let product of products">
   <h3>
-    <a [title]="product.name+' details'">{{product.name}}</a>
+    <a [title]="product.name + ' details'">{{ product.name }}</a>
   </h3>
 
-  <p *ngIf="product.description" style="color:red">
-    Description: {{product.description}}
+  <p *ngIf="product.description" style="color:green">
+    Description: {{ product.description }}
   </p>
   <button type="button" (click)="share()">Share</button>
+
+  <app-product-alerts [product]="product"></app-product-alerts>
 </div>
 <!-- 
 Copyright Google LLC. All Rights Reserved.
