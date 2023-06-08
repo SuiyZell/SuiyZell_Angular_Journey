@@ -1,7 +1,7 @@
 <h2>产品详细</h2>
-<div *ngIf="product">
-    <h3>{{product.name}}</h3>
-    <h4>{{product.price | currency}}</h4>
-    <p>{{product.description}}</p>
+<div *ngIf="product" style="margin-top: 1rem">
+    <span style="color: chocolate; font-size: 1.2rem">{{product.name}}</span>
+    <span style="margin-left: 1rem; color: gold">{{product.price | currency}}</span>
+    <p style="color: green">{{product.description}}</p>
     <button type="button" (click)="addToCart(product)">添加到购物车</button>
 </div>
